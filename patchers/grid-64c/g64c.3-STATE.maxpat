@@ -7,9 +7,9 @@
 			"revision" : 9
 		}
 ,
-		"rect" : [ 21.0, 57.0, 742.0, 793.0 ],
+		"rect" : [ 47.0, 61.0, 742.0, 793.0 ],
 		"bglocked" : 0,
-		"defrect" : [ 21.0, 57.0, 742.0, 793.0 ],
+		"defrect" : [ 47.0, 61.0, 742.0, 793.0 ],
 		"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -26,12 +26,26 @@
 		"devicewidth" : 0.0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"maxclass" : "comment",
+					"text" : "Use \"@placeholder\" and \"run\" for scoped filenames.",
+					"linecount" : 3,
+					"fontsize" : 12.0,
+					"numinlets" : 1,
+					"patching_rect" : [ 365.0, 20.0, 150.0, 42.0 ],
+					"numoutlets" : 0,
+					"id" : "obj-8",
+					"fontname" : "Anonymous Pro"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "p Interaction",
+					"text" : "p State",
 					"outlettype" : [ "" ],
 					"fontsize" : 12.0,
 					"numinlets" : 0,
-					"patching_rect" : [ 20.0, 10.0, 96.0, 18.0 ],
+					"patching_rect" : [ 170.0, 15.0, 56.0, 18.0 ],
 					"numoutlets" : 1,
 					"id" : "obj-12",
 					"fontname" : "Anonymous Pro",
@@ -43,9 +57,9 @@
 							"revision" : 9
 						}
 ,
-						"rect" : [ 554.0, 169.0, 777.0, 347.0 ],
+						"rect" : [ 635.0, 296.0, 777.0, 347.0 ],
 						"bglocked" : 0,
-						"defrect" : [ 554.0, 169.0, 777.0, 347.0 ],
+						"defrect" : [ 635.0, 296.0, 777.0, 347.0 ],
 						"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -60,17 +74,16 @@
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"maxclass" : "message",
-									"text" : "(defn hover [hx hy how] (fundraw (fn [x y] (or (= hx x) (= hy y)))))",
+									"text" : "run single-click",
 									"outlettype" : [ "" ],
 									"fontsize" : 12.0,
 									"numinlets" : 2,
-									"patching_rect" : [ 60.0, 130.0, 456.0, 16.0 ],
+									"patching_rect" : [ 105.0, 95.0, 115.0, 16.0 ],
 									"numoutlets" : 1,
-									"id" : "obj-6",
+									"id" : "obj-1",
 									"fontname" : "Anonymous Pro"
 								}
 
@@ -78,13 +91,54 @@
 , 							{
 								"box" : 								{
 									"maxclass" : "message",
-									"text" : "(defn click [cx cy] (fundraw (fn [x y] (if (and (= x cx) (= y cy)) [1 0 0] [0 0 0]))))",
+									"text" : "run toggle-clicks",
 									"outlettype" : [ "" ],
 									"fontsize" : 12.0,
 									"numinlets" : 2,
-									"patching_rect" : [ 110.0, 60.0, 610.0, 16.0 ],
+									"patching_rect" : [ 130.0, 140.0, 122.0, 16.0 ],
 									"numoutlets" : 1,
+									"id" : "obj-10",
+									"fontname" : "Anonymous Pro"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "First:",
+									"fontsize" : 12.0,
+									"numinlets" : 1,
+									"patching_rect" : [ 70.0, 25.0, 150.0, 18.0 ],
+									"numoutlets" : 0,
+									"id" : "obj-6",
+									"fontname" : "Anonymous Pro"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "(at some stage: namespaces.)",
+									"linecount" : 2,
+									"fontsize" : 12.0,
+									"numinlets" : 1,
+									"patching_rect" : [ 200.0, 40.0, 150.0, 30.0 ],
+									"numoutlets" : 0,
 									"id" : "obj-4",
+									"fontname" : "Anonymous Pro"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "message",
+									"text" : "run fundraw",
+									"outlettype" : [ "" ],
+									"fontsize" : 12.0,
+									"numinlets" : 2,
+									"patching_rect" : [ 70.0, 45.0, 83.0, 16.0 ],
+									"numoutlets" : 1,
+									"id" : "obj-2",
 									"fontname" : "Anonymous Pro"
 								}
 
@@ -103,7 +157,7 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"source" : [ "obj-6", 0 ],
+									"source" : [ "obj-1", 0 ],
 									"destination" : [ "obj-11", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ]
@@ -112,7 +166,16 @@
 							}
 , 							{
 								"patchline" : 								{
-									"source" : [ "obj-4", 0 ],
+									"source" : [ "obj-2", 0 ],
+									"destination" : [ "obj-11", 0 ],
+									"hidden" : 0,
+									"midpoints" : [  ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-10", 0 ],
 									"destination" : [ "obj-11", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ]
@@ -152,11 +215,11 @@
 , 			{
 				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "mxj net.loadbang.mxj.Clojure 1 2 @script fundraw",
+					"text" : "mxj net.loadbang.mxj.Clojure 1 2 @placeholder g64c",
 					"outlettype" : [ "", "", "" ],
 					"fontsize" : 12.0,
 					"numinlets" : 1,
-					"patching_rect" : [ 20.0, 45.0, 325.0, 18.0 ],
+					"patching_rect" : [ 20.0, 45.0, 338.0, 18.0 ],
 					"numoutlets" : 3,
 					"id" : "obj-1",
 					"fontname" : "Anonymous Pro"
