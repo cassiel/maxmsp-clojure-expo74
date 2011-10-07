@@ -43,9 +43,9 @@
 							"revision" : 9
 						}
 ,
-						"rect" : [ 846.0, 197.0, 546.0, 365.0 ],
+						"rect" : [ 544.0, 110.0, 603.0, 592.0 ],
 						"bglocked" : 0,
-						"defrect" : [ 846.0, 197.0, 546.0, 365.0 ],
+						"defrect" : [ 544.0, 110.0, 603.0, 592.0 ],
 						"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -61,6 +61,74 @@
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "Quiz: draw an X ",
+									"numinlets" : 1,
+									"fontsize" : 12.0,
+									"numoutlets" : 0,
+									"id" : "obj-18",
+									"fontname" : "Anonymous Pro",
+									"patching_rect" : [ 270.0, 490.0, 150.0, 18.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "Don't care about over/underflow",
+									"linecount" : 2,
+									"numinlets" : 1,
+									"fontsize" : 12.0,
+									"numoutlets" : 0,
+									"id" : "obj-16",
+									"fontname" : "Anonymous Pro",
+									"patching_rect" : [ 270.0, 445.0, 150.0, 30.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "message",
+									"text" : "draw-cross $1",
+									"numinlets" : 2,
+									"fontsize" : 12.0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"id" : "obj-14",
+									"fontname" : "Anonymous Pro",
+									"patching_rect" : [ 125.0, 455.0, 96.0, 16.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "number",
+									"numinlets" : 1,
+									"fontsize" : 12.0,
+									"numoutlets" : 2,
+									"outlettype" : [ "int", "bang" ],
+									"id" : "obj-12",
+									"fontname" : "Anonymous Pro",
+									"patching_rect" : [ 125.0, 430.0, 50.0, 18.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "message",
+									"text" : "(defn draw-cross [pos] (fundraw (fn [x y] (or (= pos x) (= pos y)))))",
+									"numinlets" : 2,
+									"fontsize" : 12.0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"id" : "obj-3",
+									"fontname" : "Anonymous Pro",
+									"patching_rect" : [ 10.0, 405.0, 463.0, 16.0 ]
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"maxclass" : "message",
 									"text" : "(fundraw (fn [x y] (let [r (rand)] [r r r])))",
@@ -172,7 +240,7 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"source" : [ "obj-8", 0 ],
+									"source" : [ "obj-14", 0 ],
 									"destination" : [ "obj-11", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ]
@@ -181,7 +249,16 @@
 							}
 , 							{
 								"patchline" : 								{
-									"source" : [ "obj-7", 0 ],
+									"source" : [ "obj-12", 0 ],
+									"destination" : [ "obj-14", 0 ],
+									"hidden" : 0,
+									"midpoints" : [  ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-3", 0 ],
 									"destination" : [ "obj-11", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ]
@@ -190,25 +267,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"source" : [ "obj-2", 0 ],
-									"destination" : [ "obj-11", 0 ],
-									"hidden" : 0,
-									"midpoints" : [  ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"source" : [ "obj-6", 0 ],
-									"destination" : [ "obj-11", 0 ],
-									"hidden" : 0,
-									"midpoints" : [  ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"source" : [ "obj-4", 0 ],
+									"source" : [ "obj-10", 0 ],
 									"destination" : [ "obj-11", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ]
@@ -226,7 +285,43 @@
 							}
 , 							{
 								"patchline" : 								{
-									"source" : [ "obj-10", 0 ],
+									"source" : [ "obj-4", 0 ],
+									"destination" : [ "obj-11", 0 ],
+									"hidden" : 0,
+									"midpoints" : [  ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-6", 0 ],
+									"destination" : [ "obj-11", 0 ],
+									"hidden" : 0,
+									"midpoints" : [  ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-2", 0 ],
+									"destination" : [ "obj-11", 0 ],
+									"hidden" : 0,
+									"midpoints" : [  ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-7", 0 ],
+									"destination" : [ "obj-11", 0 ],
+									"hidden" : 0,
+									"midpoints" : [  ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-8", 0 ],
 									"destination" : [ "obj-11", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ]
@@ -294,8 +389,8 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"source" : [ "obj-1", 1 ],
-					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-12", 0 ],
+					"destination" : [ "obj-1", 0 ],
 					"hidden" : 0,
 					"midpoints" : [  ]
 				}
@@ -312,8 +407,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"source" : [ "obj-12", 0 ],
-					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-1", 1 ],
+					"destination" : [ "obj-5", 0 ],
 					"hidden" : 0,
 					"midpoints" : [  ]
 				}
