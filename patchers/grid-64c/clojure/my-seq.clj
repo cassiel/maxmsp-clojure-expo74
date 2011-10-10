@@ -2,17 +2,26 @@
   "Ignore hover messages."
   )
 
+(defn pitch-for [i]
+  "Simple circle of fifths starting at C1."
+  (+ 36 (* i 7)))
+
+(defn playfn [i]
+  "Emit notes for which f is true. New outlet (2)."
+  (.outletHigh max/maxObject 2 [(pitch-for i)]))
+
 (def the-state (atom { }))
 
-(defn draw []
-  (fundraw (fn [x y] (get @the-state [x y]))))
+(defn draw [state]
+  (fundraw (fn [x y] (state [x y]))))
 
 (defn do-click-fn [x y]
   (fn [state] (assoc state [x y] (not (get state [x y])))))
 
 (defn click [x y]
+  "Called directly from Max."
   (swap! the-state (do-click-fn x y))
-  (draw))
+  (draw @the-state))
 
 (defn inc-wrap [[x y]]
     [x (mod (+ y 1) 8)])
@@ -28,9 +37,7 @@
       (playfn x))))
 
 (defn scroll []
+  "Called directly from Max."
   (swap! the-state do-scroll-fn)
   (play @the-state)
-  (draw))
-
-(defn beat [i]
-  (fundraw (fn [x y] (= x (mod i 8)))))
+  (draw @the-state))
