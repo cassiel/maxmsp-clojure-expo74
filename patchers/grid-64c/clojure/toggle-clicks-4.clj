@@ -6,11 +6,12 @@
   "Ignore hover messages."
   )
 
-(defn update-for-click [state x y]
-  "New state with the flag for [x y] reversed."
-  (assoc state [x y] (not (get state [x y]))))
+(defn four-way [x y]
+  (fn [state]
+    (update-for-click (update-for-click (update-for-click (update-for-click state x y) (- 7 x) y) x (- 7 y)) (- 7 x) (- 7 y))))
+    
 
 (defn click [x y]
   "Use update-for-click to get a new state, then draw it."
-  (swap! the-state (fn [old] (update-for-click old x y)))
+  (swap! the-state (four-way x y))
   (fundraw (fn [x y] (get @the-state [x y]))))
