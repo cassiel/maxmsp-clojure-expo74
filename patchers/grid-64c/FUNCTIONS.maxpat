@@ -7,9 +7,9 @@
 			"revision" : 9
 		}
 ,
-		"rect" : [ 21.0, 57.0, 742.0, 793.0 ],
+		"rect" : [ 55.0, 110.0, 686.0, 739.0 ],
 		"bglocked" : 0,
-		"defrect" : [ 21.0, 57.0, 742.0, 793.0 ],
+		"defrect" : [ 55.0, 110.0, 686.0, 739.0 ],
 		"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -26,15 +26,41 @@
 		"devicewidth" : 0.0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"maxclass" : "comment",
+					"text" : "Using @script to preload a Clojure script",
+					"id" : "obj-6",
+					"fontname" : "Anonymous Pro",
+					"numinlets" : 1,
+					"fontsize" : 12.0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 390.0, 20.0, 284.0, 18.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"maxclass" : "comment",
+					"text" : "(Second outlet: messages to grid.)",
+					"id" : "obj-3",
+					"fontname" : "Anonymous Pro",
+					"numinlets" : 1,
+					"fontsize" : 12.0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 390.0, 45.0, 251.0, 18.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"maxclass" : "newobj",
-					"text" : "p Interaction",
+					"text" : "p Functions",
 					"id" : "obj-12",
 					"fontname" : "Anonymous Pro",
 					"numinlets" : 0,
 					"fontsize" : 12.0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 10.0, 96.0, 18.0 ],
+					"patching_rect" : [ 20.0, 20.0, 83.0, 18.0 ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
@@ -43,9 +69,9 @@
 							"revision" : 9
 						}
 ,
-						"rect" : [ 685.0, 165.0, 777.0, 347.0 ],
+						"rect" : [ 856.0, 156.0, 418.0, 382.0 ],
 						"bglocked" : 0,
-						"defrect" : [ 685.0, 165.0, 777.0, 347.0 ],
+						"defrect" : [ 856.0, 156.0, 418.0, 382.0 ],
 						"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -63,28 +89,28 @@
 						"boxes" : [ 							{
 								"box" : 								{
 									"maxclass" : "message",
-									"text" : "(defn hover [hx hy how] (fundraw (fn [x y] (and (= hx x) (= hy y)))))",
-									"id" : "obj-6",
+									"text" : "(fundraw (fn [x y] false))",
+									"id" : "obj-1",
 									"fontname" : "Anonymous Pro",
 									"numinlets" : 2,
 									"fontsize" : 12.0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 60.0, 130.0, 463.0, 16.0 ]
+									"patching_rect" : [ 160.0, 100.0, 181.0, 16.0 ]
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"maxclass" : "message",
-									"text" : "(defn click [cx cy] (fundraw (fn [x y] (if (and (= x cx) (= y cy)) [1 0 0] [0 0 0]))))",
-									"id" : "obj-4",
+									"text" : "(fundraw (fn [x y] true))",
+									"id" : "obj-6",
 									"fontname" : "Anonymous Pro",
 									"numinlets" : 2,
 									"fontsize" : 12.0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 110.0, 60.0, 610.0, 16.0 ]
+									"patching_rect" : [ 70.0, 40.0, 174.0, 16.0 ]
 								}
 
 							}
@@ -102,7 +128,7 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"source" : [ "obj-4", 0 ],
+									"source" : [ "obj-1", 0 ],
 									"destination" : [ "obj-11", 0 ],
 									"hidden" : 0,
 									"midpoints" : [  ]
@@ -165,8 +191,8 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"source" : [ "obj-1", 1 ],
-					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-12", 0 ],
+					"destination" : [ "obj-1", 0 ],
 					"hidden" : 0,
 					"midpoints" : [  ]
 				}
@@ -174,17 +200,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"source" : [ "obj-5", 0 ],
-					"destination" : [ "obj-1", 0 ],
-					"hidden" : 0,
-					"midpoints" : [ 29.5, 724.0, 8.5, 724.0, 8.5, 35.0, 29.5, 35.0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"source" : [ "obj-12", 0 ],
-					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-1", 1 ],
+					"destination" : [ "obj-5", 0 ],
 					"hidden" : 0,
 					"midpoints" : [  ]
 				}
