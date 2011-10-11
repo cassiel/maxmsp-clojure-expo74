@@ -14,6 +14,8 @@ The file of patchers and Clojure script files
 (`cassiel-maxmsp-expo74-[...].zip`) goes into the `patches` folder for
 Max (or anywhere in Max's search path).
 
+(Downloads available under this GitHub project if you have an account.)
+
 ## Java
 
 OS X versions up to Snow Leopard have Java installed by default.
