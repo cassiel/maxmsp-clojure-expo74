@@ -38,10 +38,10 @@ The `click` function adds (always; only!) an X/Y pair to the state.
 You can call `(println @the-state)` to see the content of the map in
 the Max window (or the clue window).
 
-Exercise:
+Exercises:
 
-Modify `click` so that it toggles the state of a clicked cell.
+* Modify `click` so that it toggles the state of a clicked cell.
 
-Modify `click` so that it does something more pretty.
+* Modify `click` so that it does something more pretty.
 
-(Extra!) Modify `click` to do something in colour.
+* (Extra!) Modify `click` to do something in colour.

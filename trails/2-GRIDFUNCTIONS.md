@@ -73,8 +73,10 @@ For example: a `draw-cross 3 4` message causes evaluation of
 `(draw-cross 3 4)`. (And `do-something foo` is converted into
 `(do-something "foo")`.)
 
-Exercise: implement `draw-column` to take an integer input.
+Exercises:
 
-Implement `draw-cross` to draw a cross with two integers.
+* Implement `draw-column` to take an integer input.
 
-How about a `draw-x`?
+* Implement `draw-cross` to draw a cross with two integers.
+
+* How about a `draw-x`?
