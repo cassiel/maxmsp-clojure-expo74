@@ -14,7 +14,8 @@ The file of patchers and Clojure script files
 (`cassiel-maxmsp-expo74-[...].zip`) goes into the `patches` folder for
 Max (or anywhere in Max's search path).
 
-(Downloads available under this GitHub project if you have an account.)
+Downloads available under this GitHub project if you have an account; otherwise, all
+available from [Dropbox][dropbox].
 
 ## Java
 
@@ -45,3 +46,4 @@ Runtime) will probably work, but I tested with the JDK.
 [npp]: http://http://notepad-plus-plus.org
 [tm]: http://macromates.com
 [jedit]: http://www.jedit.org
+[dropbox]: http://dl.dropbox.com/u/2546860/expo74-clojure.zip
