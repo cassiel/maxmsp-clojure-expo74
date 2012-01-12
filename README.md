@@ -4,10 +4,10 @@
 
 The following JAR files need to go into Cycling '74/java/lib:
 
-* `clojure-1.2.1.jar`
-* `net.loadbang.clojure-1.0.0.jar`
-* `net.loadbang.lib-1.7.0.jar`
-* `net.loadbang.scripting-1.1.jar`
+* `clojure-1.3.9.jar`
+* `net.loadbang.clojure-1.2.0.jar`
+* `net.loadbang.lib-1.b.0.jar`
+* `net.loadbang.scripting-1.1.0.jar`
 * `log4j-1.2.12.jar`
 
 The file of patchers and Clojure script files

@@ -15,7 +15,7 @@
   (draw (swap! the-state (do-click-fn x y))))
 
 (defn inc-wrap [[x y]]
-    [x (mod (+ y 1) 8)])
+    [(mod (+ x 1) 8) (mod (- y 1) 8)])
 
 (defn do-scroll-fn [state]
   (let [ks (keys state)
