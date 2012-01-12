@@ -46,4 +46,4 @@ Runtime) will probably work, but I tested with the JDK.
 [npp]: http://http://notepad-plus-plus.org
 [tm]: http://macromates.com
 [jedit]: http://www.jedit.org
-[dropbox]: http://dl.dropbox.com/u/2546860/expo74-clojure.zip
+[dropbox]: http://dl.dropbox.com/u/2546860/expo74-clojure-all.zip
