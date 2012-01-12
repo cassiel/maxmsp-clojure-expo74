@@ -9,6 +9,9 @@ Implement `click` and `hover` to bring the grid into Clojure.
 
 Exercises:
 
+* Improve `hover` so that all cells are "off" when the mouse pointer
+  leaves the grid
+
 * Implement a `hover` function which draws a cross at the cell under
   the mouse pointer
   

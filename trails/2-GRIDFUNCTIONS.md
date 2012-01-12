@@ -79,4 +79,4 @@ Exercises:
 
 * Implement `draw-cross` to draw a cross with two integers.
 
-* How about a `draw-x`?
+* How about a `draw-x` (a diagonal cross)?
