@@ -2,8 +2,8 @@
 	"name" : "maxmsp-clojure-expo74",
 	"version" : 1,
 	"creationdate" : -885750964,
-	"modificationdate" : -885744239,
-	"viewrect" : [ 188.0, 484.0, 583.0, 354.0 ],
+	"modificationdate" : -885622775,
+	"viewrect" : [ 93.0, 153.0, 583.0, 354.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -13,7 +13,6 @@
 			"GRIDSTATE.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1,
-				"toplevel" : 1,
 				"singleton" : 				{
 					"bootpath" : "/Users/nick/CASSIEL-GIT/maxmsp-clojure-expo74/patchers/GRIDSTATE.maxpat",
 					"projectrelativepath" : "../maxmsp-clojure-expo74/patchers/GRIDSTATE.maxpat"
