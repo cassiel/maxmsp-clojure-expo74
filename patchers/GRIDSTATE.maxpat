@@ -4,10 +4,10 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 0,
-			"revision" : 3
+			"revision" : 4
 		}
 ,
-		"rect" : [ 25.0, 50.0, 809.0, 793.0 ],
+		"rect" : [ 43.0, 50.0, 694.0, 793.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -54,10 +54,10 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 0,
-							"revision" : 3
+							"revision" : 4
 						}
 ,
-						"rect" : [ 729.0, 179.0, 396.0, 252.0 ],
+						"rect" : [ 546.0, 101.0, 558.0, 418.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -78,6 +78,20 @@
 						"tags" : "",
 						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Anonymous Pro",
+									"fontsize" : 12.0,
+									"id" : "obj-3",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 250.0, 70.0, 56.0, 16.0 ],
+									"text" : "(clear)"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Anonymous Pro",
 									"fontsize" : 12.0,
@@ -150,6 +164,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-11", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-3", 0 ]
 								}
 
 							}
@@ -252,21 +275,21 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "g64c.Grid.maxpat",
-				"bootpath" : "/Users/nick/CASSIEL-GIT/maxmsp-clojure-expo74/patchers/patchers",
+				"bootpath" : "/Users/nick/CASSIEL-GIT/maxmsp-clojure-expo74/patchers",
 				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "g64c.Column.maxpat",
-				"bootpath" : "/Users/nick/CASSIEL-GIT/maxmsp-clojure-expo74/patchers/patchers",
+				"bootpath" : "/Users/nick/CASSIEL-GIT/maxmsp-clojure-expo74/patchers",
 				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "g64c.Cell.maxpat",
-				"bootpath" : "/Users/nick/CASSIEL-GIT/maxmsp-clojure-expo74/patchers/patchers",
+				"bootpath" : "/Users/nick/CASSIEL-GIT/maxmsp-clojure-expo74/patchers",
 				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
